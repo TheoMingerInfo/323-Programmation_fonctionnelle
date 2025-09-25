@@ -46,7 +46,7 @@ namespace Rando
             Pen myPen = new Pen(Color.Red);
             myPen.Width = 2;
 
-            Point[] points = trackPoints.Select(Trackpoint => new Point() { X = Convert.ToInt32(Trackpoint.Longitude),Y = Convert.ToInt32(Trackpoint.Latitude) }).ToArray();
+            Point[] points = trackPoints.Select(Trackpoint => new Point() { X = Convert.ToInt32(Trackpoint.Longitude * 10000),Y = Convert.ToInt32(Trackpoint.Latitude * 10000) }).ToArray();
 
             //Point[] points = new Point[4] { new Point(30,50), new Point(50,10), new Point(80,50), new Point(111,400) };
             //this.CreateGraphics().DrawLines(myPen, points);
