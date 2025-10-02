@@ -111,7 +111,6 @@ class Program
         products.Add(new Product() { Location = "15", Provider = "Crizzi", Name = "Myrtilles", Quantity = 12, Unit = "kg", Price = 3.00m });
         products.Add(new Product() { Location = "15", Provider = "Crizzi", Name = "Groseilles", Quantity = 12, Unit = "kg", Price = 3.50m });
 
-
         var nombreGroseille = products.Where(p => p.Name == "Groseille").Count();
         
         var CA = products.GroupBy
@@ -135,7 +134,6 @@ class Program
 
         Console.WriteLine($"The merchant with the most affinity is: {maxAffinity.Marchant} with a score of {maxAffinity.AffinityScore}");
         Console.WriteLine(maxNoix);
-
 
         int Affinity(string name, string product)
         {
